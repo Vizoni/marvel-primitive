@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marvel - Raphael</title>
+</head>
+<link rel="stylesheet" href="assets/main.css">
+
+<body class="my-body">
+
+    <div class="header-title">
+        <span class="left" id="busca-marvel">BUSCA MARVEL</span>
+        <span class="left light-title">Teste Front-End</span>
+        <span class="right light-title" id="my-name">Raphael Vizoni do Prado</span>
+    </div>
+    <br>
+    <div class="borda-vermelha"></div>
+    <br>
+
+    <div class="search-bar-div col-12">
+        <span class="search-label">Nome do Personagem</span>
+        <br>
+        <input class="search-bar" type="text" id="search-hero-name" onkeyup="filterHeroesList()">
+    </div>
+    <br>
+
+    <table class="table-heros" id="heroes-table">
+        <tr>
+            <th class="table-title small">Personagem</th>
+            <th class="table-title small">Séries</th>
+            <th class="table-title medium">Eventos</th>
+        </tr>
+    </table>
+
+    <table class="table-heros" id="heroes-table-responsive">
+        <tr>
+            <th class="table-title">Nome</th>
+        </tr>
+    </table>
+
+    <div class="pagination-div" align="middle">
+        <span class="pagination-back" onclick="backPage()" type="button"></span>
+        <div  id="pagination-div" style="display: flex">
+            <div class="selected-pagination-number" onclick="changePage(1)" id="page1">1</div>
+            <div class="pagination-number" onclick="changePage(2)" id="page2">2</div>
+            <div class="pagination-number" onclick="changePage(3)" id="page3">3</div>
+        </div>
+        <span class="pagination-next" onclick="nextPage()" type="button"></span>
+    </div>
+    <br>
+
+    <!-- <div class="hero-detail hide-content" id="hero-detail">
+        <div style="margin: 12px 30px 12px 30px">
+            <img id="hero-image" class="hero-image" src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg">
+            <span class="light-title name" id="hero-name"> Tony Stark </span>
+            <span id="close-button" type="button" onclick="closeHeroDetails()"> X </span>
+
+            <br>
+            <div class="series">
+                <span class="light-title" style="font-weight: 500"> Eventos que participou: </span>
+                <ul id="events-list">
+                </ul>
+            </div>
+
+            <br>
+            <div class="series">
+                <span class="light-title" style="font-weight: 500"> Séries que participou: </span>
+                <ul id="series-list">
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+</body>
+
+</html>
+<script src="js/main.js"></script>
